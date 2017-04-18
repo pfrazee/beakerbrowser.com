@@ -1,0 +1,231 @@
+.about .hero {
+  text-align: center;
+
+  .container {
+    display: block;
+    max-width: 600px;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+  }
+}
+
+.about .section {
+
+  &.what {
+    background: $gray--light;
+    text-align: left;
+    font-size: 1.1rem;
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .description, .demos {
+      width: 100%;
+      text-align: center;
+
+      @include respond-to(show-grid-2) {
+        width: 49%;
+        display: inline-block;
+        padding-right: 0;
+        padding-bottom: 0;
+        text-align: left;
+      }
+    }
+
+    .demos {
+      padding-top: 2rem;
+    }
+
+    .description {
+      @include respond-to(show-grid-2) {
+        padding-right: 2rem;
+        vertical-align: top;
+      }
+    }
+
+    .demo-link {
+      @extend %rounded;
+      display: inline-block;
+      width: 100px;
+      font-size: .75rem;
+      text-align: center;
+      padding: .75rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      border: 1px solid $gray;
+      vertical-align: top;
+      height: 93px;
+
+      @include respond-to(show-grid-2) {
+        width: 26%;
+        height: auto;
+        font-size: .85rem;
+      }
+
+      + .demo-link {
+        margin-left: 1rem;
+      }
+
+      &.active {
+        background: #fff;
+        @extend %box-shadow--light;
+      }
+
+      i {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+      }
+
+      .title {
+        display: block;
+        line-height: 1.2;
+      }
+    }
+
+    .demo {
+      display: none;
+      border-radius: 6px;
+      overflow: hidden;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  &.why {
+    position: relative;
+
+    @include respond-to(show-brackets-about) {
+      &:before,
+      &:after {
+        position: absolute;
+        font-size: 10rem;
+        color: #e6e6ea;
+        top: 20px;
+      }
+
+      &:before {
+        content: '[';
+        left: 210px;
+      }
+
+      &:after {
+        content: ']';
+        right: 210px;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+    }
+
+    p.intro {
+      margin-bottom: 3rem;
+      font-size: 1.25rem;
+      max-width: 800px;
+    }
+
+    p {
+      margin: auto;
+      margin-top: 1.5rem;
+      max-width: 500px;
+    }
+  }
+
+  &.how {
+
+    .description {
+      padding-bottom: 2rem;
+
+      @include respond-to(show-grid-2) {
+        padding-bottom: 0;
+        padding-right: 2rem;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+
+      p {
+        margin-bottom: 1.5rem;
+      }
+
+      p, li {
+        font-weight: 300;
+        margin-bottom: 1rem;
+        font-size: .95rem;
+      }
+
+      ul {
+        margin-left: 1rem;
+      }
+
+      li .label {
+        font-weight: 500;
+      }
+    }
+
+    .links {
+
+      @include respond-to(show-grid-2) {
+        padding-left: 2rem;
+      }
+    }
+
+    .description, .links {
+      width: 100%;
+      text-align: center;
+      vertical-align: top;
+
+      @include respond-to(show-grid-2) {
+        width: 49%;
+        display: inline-block;
+        padding-right: 0;
+        text-align: left;
+      }
+    }
+
+    .link-container {
+      @extend %flex-container;
+      @extend %rounded;
+      border: 1px solid transparentize(#000, .85);
+      padding: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background: transparentize(#000, .95);
+      }
+
+      + .link-container {
+        margin-top: 1.5rem;
+      }
+
+      .title, .icon {
+        text-shadow: 0 1px 2px rgba(0,0,0,.2);
+      }
+
+      .title {
+        font-size: 1.1rem;
+      }
+
+      .icon {
+        font-size: 30px;
+      }
+
+      .text {
+        margin-left: 1.5rem;
+
+        p {
+          font-weight: 300;
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+}
+

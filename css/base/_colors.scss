@@ -19,6 +19,7 @@ $accent--light: tint($accent, 65%);
 $gray--very-dark: mix($black, $white, 65%);
 $gray--dark: mix($black, $white, 35%);
 $gray: mix($black, $white, 20%);
+$gray--mid: mix($black, $white, 10%);
 $gray--light: mix($black, $white, 3.5%);
 
 // text colors
