@@ -1,0 +1,178 @@
+---
+layout: default
+---
+<div class="about">
+<div class="hero">
+  <img src="/img/polygons.svg" class="hero__bg" aria-hidden="true">
+  <div class="container">
+    <h1>About Beaker</h1>
+  </div>
+</div>
+
+<div class="section what">
+  <div class="container">
+    <div class="description">
+      <h2>An experimental browser</h2>
+      <p>
+        Beaker is an experimental browser built to demonstrate an alternative
+        vison for the Web.
+      </p>
+
+      <div class="demo-links">
+        <div class="demo-link active" data-demo="host-site-demo">
+          <i class="icon fa fa-code"></i>
+          <span class="title">Host peer-to-peer websites</span>
+        </div>
+        <div class="demo-link" data-demo="fork-site-demo">
+          <i class="icon fa fa-pencil-square-o"></i>
+          <span class="title">Fork and edit applications</span>
+        </div>
+        <div class="demo-link" data-demo="secret-files-demo">
+          <i class="icon fa fa-picture-o"></i>
+          <span class="title">Share files privately</span>
+        </div>
+      </div>
+    </div>
+    <div class="demos">
+      <div class="demo active" id="host-site-demo">
+        <img src="/img/about-host-demo.png"/>
+      </div>
+
+      <div class="demo" id="fork-site-demo">
+        <img src="/img/about-fork-demo.png"/>
+      </div>
+      <div class="demo" id="secret-files-demo">
+        <img src="/img/about-share-files-demo.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section why">
+  <div class="container">
+    <h2>Why</h2>
+    <p class="intro">
+      The Web is losing its spirit of freedom and innovation by
+      depending on a small set of centrally-operated services. We
+      believe this can be solved with new protocols and application models.
+    </p>
+
+    <p>
+      Service-based applications are closed-source and privately owned. By
+      inverting the model to run “thick” clientside applications and depending
+      only on peer-to-peer protocols and fungible thin services, we can empower
+      users to communally modify source code, control their identities, and secure
+      their data.
+    </p>
+
+    <p>
+      We envision a future where communities can build applications in response to
+      their own needs. New forks of an application could go viral weekly, and the
+      community would be actively engaged in the forks they prefer.
+    </p>
+  </div>
+</div>
+
+<div class="section how">
+  <div class="container">
+    <div class="description">
+      <h2>How it works</h2>
+      <p>
+        Beaker uses <a href="https://datproject.org">Dat</a>, a peer-to-peer
+        protocol to manage and sync data stores. Sites published with Beaker are:
+      </p>
+      <ul>
+        <li>
+          <span class="label">Secure</span> - Changes are written to an
+          append-only log and content is verified upon arrival, creating a version history that improves auditability.
+        </li>
+
+        <li>
+          <span class="label">Distributed</span> - Users connect directly to
+          other users to retrieve content. Anyone can host files without
+          depending on a centralized service.
+        </li>
+
+        <li>
+          <span class="label">User-owned</span> - Data and source code live on
+          the user’s device and run in a secure, configurable sandbox. Services
+          are optional.
+        </li>
+      </ul>
+    </div>
+
+    <div class="links">
+      <a class="link-container"
+        href="https://github.com/datproject/docs/blob/master/papers/dat-paper.md">
+        <i class="icon fa fa-file-text-o"></i>
+        <div class="text">
+          <span class="title">
+            Dat whitepaper
+            <i class="fa fa-angle-right"></i>
+          </span>
+          <p>Learn more about the Dat peer-to-peer protocol.</p>
+        </div>
+      </a>
+      <a href="https://github.com/beakerbrowser/beaker" class="link-container">
+        <i class="icon fa fa-code"></i>
+        <div class="text">
+          <span class="title">
+            View Source
+            <i class="fa fa-angle-right"></i>
+          </span>
+          <p>View the Beaker source code on GitHub.</p>
+        </div>
+      </a>
+      <a class="link-container"
+        href="https://webchat.freenode.net/?beakerbrowser">
+        <i class="icon hashtag">#</i>
+        <div class="text">
+          <span class="title">
+            Join us on IRC
+            <i class="fa fa-angle-right"></i>
+          </span>
+          <p>We hang out in #beakerbrowser and #dat on freenode.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<div class="section section--download">
+  <div class="container">
+    <h2>Get started</h2>
+    <p>
+      <a class="btn" href="/docs/">Learn More</a>
+      <a class="btn btn--action"
+         href="/docs/install.html">
+        Install Beaker
+        <i class="fa fa-download" aria-hidden="true"></i>
+      </a>
+    </p>
+  </div>
+  <div class="divider"></div>
+</div>
+</div>
+<script>
+  var demoLinks = document.querySelectorAll('.demo-link');
+  demoLinks.forEach(function (link) {
+    link.addEventListener('click', setActiveDemo);
+  })
+
+  function setActiveDemo (e) {
+    var demos = document.querySelectorAll('.demo');
+    var activeDemo = e.currentTarget.dataset.demo;
+
+    demos.forEach(function (demo) {
+      demo.classList.remove('active');
+    })
+
+    demoLinks.forEach(function (link) {
+      link.classList.remove('active');
+    })
+
+    document.getElementById(activeDemo).classList.add('active');
+    document.querySelector(`[data-demo=${activeDemo}]`).classList.add('active')
+  }
+</script>
