@@ -74,7 +74,7 @@ Click "Create site" and Beaker will take you to the library page for your site:
 <figcaption>Your new site in your Library</figcaption>
 </figure>
 
-By default, Beaker creates a new folder for you under the `~/Sites` directory. In this case, we want to pick our own folder, because we want to use the `./_sites` folder within our Jekyll blog. To select the `_site` directory, click "Change folder" in the Library dropdown menu.
+By default, Beaker creates a new folder for you under the `~/Sites` directory. In this case, we want to pick our own folder, because we want to use the `./_site` folder within our Jekyll blog. To select the `_site` directory, click "Change folder" in the Library dropdown menu.
 
 <figure>
 <img data-src="/img/docs/tut-create-a-blog/change-folder.jpg" >
