@@ -70,8 +70,8 @@ toplevel_methods:
       <figcaption class="code">example</figcaption>
       ```js
       var archive = await DatArchive.selectArchive({
-        title: 'Hello, world!',
-        buttonLabel: 'My new site'
+        title: 'Select an archive',
+        buttonLabel: 'Submit'
       })
       ```
 
