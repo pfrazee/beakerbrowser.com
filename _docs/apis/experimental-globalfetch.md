@@ -11,7 +11,7 @@ experimental: true
 
 This API is functionally identical to [fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) with the following caveats:
 
- - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) is not applied, so the site can send a request to any service
+ - Contrary to  [SOP](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy), [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) is applied, so the site can send a request to any service 
  - A permission prompt is raised for each request to a new origin
  - Only HEAD and GET are supported
  - Cookies/credentials are never sent
