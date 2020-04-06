@@ -25,12 +25,12 @@ title: Installing Beaker
       </p>
     </a>
 
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.10/Beaker.Browser-0.8.10.AppImage" class="col col-1-3 installer linux">
+    <a href="https://flathub.org/repo/appstream/com.beakerbrowser.Beaker.flatpakref" class="col col-1-3 installer linux">
       <h2 class="platform">Linux</h2>
       <i class="platform-icon fa fa-linux"></i>
 
       <p class="pseudolink">
-        AppImage installer (x86_64)
+        Flatpak package (x86_64)
         <i class="fa fa-angle-right"></i>
       </p>
     </a>
@@ -39,7 +39,11 @@ title: Installing Beaker
 
 ## Staying updated
 
-Beaker will automatically keep up-to-date on macOS and Windows, but not on Linux. Linux users can subscribe to the [AppCast feed](https://github.com/beakerbrowser/beaker/releases.atom) (includes version release notes) to stay updated.
+Beaker will automatically keep up-to-date on macOS and Windows by itself, but not on Linux. Linux users can update through [Flatpak](https://flatpak.org/setup/):
+```bash
+flatpak update
+```
+You can subscribe to the [AppCast feed](https://github.com/beakerbrowser/beaker/releases.atom) to see version release notes as well.
 
 ## Build Beaker from source
 
