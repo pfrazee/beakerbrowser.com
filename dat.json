@@ -1,4 +1,10 @@
 {
   "title": "beakerbrowser.com",
-  "description": "The project home for Beaker Browser"
+  "description": "The project home for Beaker Browser",
+  "links": {
+    "payment": [{
+      "href": "https://opencollective.com/beaker",
+      "type": "text/html"
+    }]
+  }
 }
